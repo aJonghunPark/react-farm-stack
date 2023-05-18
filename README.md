@@ -1,46 +1,51 @@
-# Getting Started with Create React App
+# FastAPI + React によるフルスタック Web開発
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) TS template.
+https://www.udemy.com/share/105LYM3@vLOD5-YVkw_MbC5ZDBvaQAGU4gWB2IVJBL8A1MdiImlk2rgRLpRiK2UC5hKoANV23w==/
 
-## Available Scripts
+Kazu T+さんの講座でFARM（FastAPI + React + MongoDB）でTodoアプリを作ります。
+このリポジトリはReactで作成したフロントエンド側です。
 
-In the project directory, you can run:
+FastAPIについては[公式サイト](https://fastapi.tiangolo.com/ja/)を確認してください。
 
-### `npm start`
+## nodeの環境構築
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+私はnvmでnodeのバージョン管理を行っていますが、nodenvなど他のものを使っても構いません。
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```sh
+brew install nvm
+```
 
-### `npm test`
+nvmで最新バージョンのnodeをインストールします。
+nvm ls-remote --ltsでインストールできるnodeのリストが表示されます。
+私は現時点の最新である18.15.0をインストールしました。
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```sh
+# インストールできるnodeのリストを確認
+nvm ls-remote --lts
 
-### `npm run build`
+# nodeをインストールする。
+nvm install 18.15.0
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# インストールしたnodeのバージョンを確認
+nvm ls
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# インストールしたnodeのバージョンを指定
+nvm use 18.15.0
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# インストールしたnodeのバージョンをデフォルトで設定
+nvm alias default v18.15.0
+```
 
-### `npm run eject`
+## プロジェクトの生成
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```sh
+create-react-app react-farm-stack --template redux-typescript
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Reactのプロジェクトの場合は色々と下準備が必要です。
+[この文書](https://github.com/aJonghunPark/rtk-saga-crud/blob/main/doc/02.install.md)をご参照ください。
+上記の文書からRedux-Saga、MUI、Axiosはインストールする必要がありません。
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+下準備が終わったら、yarn startでクライアントを立ち上げます。
+この場合、バックエンド側のサーバーも立ち上げないといけません。
+バックエンド側のサーバーは[ここ](https://github.com/aJonghunPark/fast_api)をご確認ください。

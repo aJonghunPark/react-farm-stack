@@ -44,7 +44,7 @@ create-react-app react-farm-stack --template redux-typescript
 
 Reactのプロジェクトの場合は色々と下準備が必要です。
 [この文書](https://github.com/aJonghunPark/rtk-saga-crud/blob/main/doc/02.install.md)をご参照ください。
-上記の文書からRedux-Saga、MUI、Axiosはインストールする必要がありません。
+上記の文書からRedux-Saga、MUIはインストールする必要がありません。
 
 下準備が終わったら、yarn startでクライアントを立ち上げます。
 この場合、バックエンド側のサーバーも立ち上げないといけません。

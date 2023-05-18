@@ -5,8 +5,6 @@ https://www.udemy.com/share/105LYM3@vLOD5-YVkw_MbC5ZDBvaQAGU4gWB2IVJBL8A1MdiImlk
 Kazu T+さんの講座でFARM（FastAPI + React + MongoDB）でTodoアプリを作ります。
 このリポジトリはReactで作成したフロントエンド側です。
 
-FastAPIについては[公式サイト](https://fastapi.tiangolo.com/ja/)を確認してください。
-
 ## nodeの環境構築
 
 私はnvmでnodeのバージョン管理を行っていますが、nodenvなど他のものを使っても構いません。
